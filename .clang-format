@@ -1,0 +1,12 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 100
+PointerAlignment: Left
+SpaceAfterTemplateKeyword: false
+AlwaysBreakTemplateDeclarations: Yes
+SpaceBeforeInheritanceColon: false
+FixNamespaceComments: true
+NamespaceIndentation: All
+IndentCaseLabels: true
+AlignAfterOpenBracket: BlockIndent
+PenaltyReturnTypeOnItsOwnLine: 10000

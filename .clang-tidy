@@ -1,0 +1,18 @@
+Checks: >
+  *,
+  -altera-unroll-loops,
+  -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -fuchsia-overloaded-operator,
+  -fuchsia-default-arguments-*,
+  -google-readability-todo',
+  -hicpp-named-parameter,
+  -llvm-else-after-return,
+  -llvmlibc-*,
+  -modernize-use-trailing-return-type,
+  -misc-non-private-member-variables-in-classes,
+  -readability-magic-numbers,
+  -readability-else-after-return,
+  -readability-identifier-length,
+  -readability-named-parameter
+

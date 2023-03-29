@@ -1,0 +1,11 @@
+CompileFlags:
+  Add: []
+  # Add: [-std=c++20]
+  # Add: [-Wall]
+  # Remove: [-std=*]
+  # Remove: -W*
+  # Compiler: clang++
+Hover:
+  ShowAKA: Yes
+Diagnostics:
+  UnusedIncludes: Strict

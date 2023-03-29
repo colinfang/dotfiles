@@ -1,0 +1,57 @@
+[tool.pyright]
+useLibraryCodeForTypes = false
+typeCheckingMode = "strict"
+
+reportCallInDefaultInitializer = "error"
+reportImplicitStringConcatenation = "error"
+reportMissingSuperCall = "none"
+reportPropertyTypeMismatch = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportUnusedCallResult = "error"
+
+reportUnknownVariableType = "none"
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+
+
+[tool.mypy]
+strict = true
+show_error_codes = true
+warn_unused_configs = true
+warn_unreachable = true
+show_column_numbers = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+
+[tool.pylint."messages control"]
+disable = [
+    # Convention
+    "missing-docstring",
+    "invalid-name",
+    "multiple-statements",
+    # Refactor
+    "trailing-newlines",
+    "no-else-return",
+    "too-many-locals",
+    "too-many-arguments",
+    "too-many-return-statements",
+    "too-many-branches",
+    "too-few-public-methods",
+    # Error
+    "no-member",
+    "import-error",
+    # Warning
+    "logging-format-interpolation",
+    "broad-except",
+    "logging-fstring-interpolation",
+    "global-statement"
+]
+enable = [
+    # Information
+    "useless-suppression"
+]
+
+[tool.pylint.format]
+max-line-length = 120
