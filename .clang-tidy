@@ -1,11 +1,12 @@
 Checks: >
   *,
+  -altera-struct-pack-align,
   -altera-unroll-loops,
   -bugprone-easily-swappable-parameters,
   -cppcoreguidelines-avoid-magic-numbers,
   -fuchsia-overloaded-operator,
   -fuchsia-default-arguments-*,
-  -google-readability-todo',
+  -google-readability-todo,
   -hicpp-named-parameter,
   -llvm-else-after-return,
   -llvmlibc-*,
