@@ -1,0 +1,43 @@
+.vscode-dark a {
+    color: #608b4e;
+    font-size: 0.9em;
+}
+
+.vscode-dark h1 {
+    color: #569cd6;
+    font-size: 1.5em;
+}
+
+.vscode-dark h2 {
+    color: #569cd6;
+    font-size: 1.3em;
+}
+
+.vscode-dark code {
+    color: #ce9178;
+}
+
+.vscode-dark ul {
+    list-style-type: "- ";
+}
+
+.vscode-dark pre {
+    border-style: outset;
+    border-color: #ce9178;
+    background-color: unset;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+
+
+eqn {
+    font-size: 1.3em;
+}
+
+eq {
+    font-size: 1.0em;
+}

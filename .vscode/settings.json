@@ -1,0 +1,201 @@
+{
+    "markdown.styles": [
+        ".vscode/style.css"
+    ],
+    "files.associations": {
+        "*CMakeLists.txt": "cmake"
+    },
+    "search.exclude": {
+        // Root of the workspace
+        "js_output": true,
+        "js_lib": true,
+    },
+     "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["meta.link.inet.markdown"],
+                "settings": {
+                    "foreground": "#608b4e"
+                }
+            },
+            {
+                "scope": ["punctuation.definition.math.begin.markdown", "punctuation.definition.math.end.markdown"],
+                "settings": {
+                    "foreground": "#608b4e"
+                }
+            },
+            {
+                "scope": ["markup.reference.plugin"],
+                "settings": {
+                    "foreground": "#c372cc"
+                }
+            },
+            {
+                "scope": ["markup.tag"],
+                "settings": {
+                    "foreground": "#c4d80e"
+                }
+            },
+            {
+                "scope": ["markup.tag.example"],
+                "settings": {
+                    "foreground": "#43bccd"
+                }
+            },
+            {
+                "scope": ["markup.tag.benefit", "markup.tag.abstract"],
+                "settings": {
+                    "foreground": "#56993a"
+                }
+            },
+            {
+                "scope": ["markup.tag.drawback", "markup.tag.issue"],
+                "settings": {
+                    "foreground": "#ea3546"
+                }
+            },
+            {
+                "scope": ["meta.link.inline.markdown string.other.link.title.markdown"],
+                "settings": {
+                    "foreground": "#c372cc"
+                }
+            },
+            {
+                "scope": ["meta.link.inline.markdown markup.underline.link.markdown"],
+                "settings": {
+                    "foreground": "#999999"
+                }
+            },
+            {
+                "scope": ["meta.embedded.math.markdown", "markup.math.inline.markdown", "constant.numeric.math.tex", "constant.character.math.tex", "entity.name.function.math.tex", "punctuation.definition.function.math.tex"],
+                "settings": {
+                    "foreground": "#CE9178"
+                }
+            },
+            {
+                "scope": ["markup.italic.markdown"],
+                "settings": {
+                    "foreground": "#c06c84",
+                    "fontStyle": "bold"
+                }
+            },{
+                "scope": ["punctuation.definition.italic.markdown"],
+                "settings": {
+                    "foreground": "#999999",
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "mdmath.delimiters": "gitlab",
+    // A list of global macros
+    "mdmath.globalMacros": [
+        "\\gdef\\E#1{\\operatorname{𝔼}\\!\\left[#1\\right]}",
+        "\\gdef\\Eq#1#2{\\operatorname{𝔼}_{#1}\\!\\left[#2\\right]}",
+        // The followings are similar
+        "\\gdef\\squareBracket#1#2{\\operatorname{#1}\\!\\left[#2\\right]}",
+        "\\gdef\\Var#1{\\operatorname{Var}\\!\\left[#1\\right]}",
+        "\\gdef\\KL#1#2{\\operatorname{KL}(#1\\,\\|\\,#2)}",
+        "\\gdef\\diag#1{\\operatorname{Diag}\\!\\left[#1\\right]}",
+        // Derivatives
+        "\\gdef\\dydx#1#2{\\frac{∂#1}{∂#2}}",
+        "\\gdef\\dyydx#1#2{\\frac{∂}{∂#1}\\left(#2\\right)}",
+        "\\gdef\\ddydx#1#2{\\frac{∂^2#1}{∂{#2}^2}}",
+        "\\gdef\\ddyydx#1#2{\\frac{∂^2}{∂#1^2}\\left(#2\\right)}",
+        "\\gdef\\d#1{\\mathop{\\mathrm{d}#1}}",
+        "\\gdef\\radon#1#2{\\frac{\\d #1}{\\d #2}}",
+        "\\gdef\\Hessian{\\mathbf{H}}",
+        // Others
+        "\\gdef\\O{\\mathcal{O}}",
+        "\\gdef\\abs#1{\\left\\lvert #1 \\right\\rvert}",
+        "\\gdef\\detm#1{\\left\\lvert #1 \\right\\rvert}",
+        "\\gdef\\absdet#1{\\left\\lvert \\det{#1} \\right\\rvert}",
+        "\\gdef\\tr#1{\\operatorname{tr}(#1)}",
+        "\\gdef\\norm#1{\\left\\lVert #1\\right\\rVert}",
+        "\\gdef\\P#1{\\operatorname{ℙ}\\!\\left(#1\\right)}",
+        "\\gdef\\p{\\mathop{p}}",
+        "\\gdef\\cov{\\operatorname{cov}}",
+        "\\gdef\\ELBO{\\text{ELBO}}",
+        "\\gdef\\T{^⊺}",
+        "\\gdef\\indep{\\operatorname{⫫}}",
+        // "\\gdef\\H{^\\mathsf{H}}",
+        "\\gdef\\quadf#1#2{#1\\T#2#1}",
+        "\\gdef\\inv#1{\\frac{1}{#1}}",
+        "\\gdef\\xtx#1{#1\\T#1}",
+        "\\gdef\\xxt#1{#1#1\\T}",
+        "\\gdef\\ith#1{^{(#1)}}",
+        "\\gdef\\listOf#1#2#3{#1_{#2}, … , #1_{#3}}",
+        "\\gdef\\lst{\\ldotp \\;}",
+        "\\gdef\\many#1#2#3{#2 #1 ⋯ #1 #3}",
+        "\\gdef\\inner#1#2{⟨#1, #2⟩}",
+        "\\gdef\\vline{\\rule[.5ex]{2.5ex}{0.4pt}}",
+        "\\gdef\\zeroSet{\\{0\\}}",
+        "\\gdef\\setOf#1#2{\\{\\, #1 \\mid #2 \\,\\}}",
+        "\\gdef\\∑#1#2#3{∑_{#1=#2}^{#3}}",
+        "\\gdef\\maxOf#1#2{\\max_{#1}\\left[ #2 \\right]}",
+        "\\gdef\\argmaxOf#1#2{\\argmax_{#1}\\left[ #2 \\right]}",
+        "\\gdef\\minOf#1#2{\\min_{#1}\\left[ #2 \\right]}",
+        "\\gdef\\argminOf#1#2{\\argmin_{#1}\\left[ #2 \\right]}",
+        "\\gdef\\defEq{\\stackrel{\\mathclap{\\tiny\\text{def}}}{=}}",
+        "\\gdef\\spec{\\stackrel{\\mathclap{\\tiny\\text{spec}}}{=}}",
+        "\\gdef\\lik{\\mathcal{L}}",
+        "\\gdef\\if{\\text{\\small if}\\;\\;}"
+    ],
+    // Inconsolata is small
+    "editor.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.lineHeight": 1.5,
+    "editor.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "markdown.preview.fontFamily":  "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "powermode.enabled": true,
+    "powermode.presets": "particles",
+    "powermode.shake.enabled": false,
+    "powermode.combo.counterSize": 2,
+    "powermode.combo.timeout": 5,
+    // Enable .ipynb in search.
+    "search.useIgnoreFiles": false,
+    "notebook.markup.fontSize": 16,
+    // "julia.executablePath": "~/julia_binary/julia-1.9.0/bin/julia",
+    // Issue: Need to remove this to see the default in UI
+    // This appends to default list.
+    "explorer.fileNesting.patterns": {
+        "*.tsx": "$(capture).js", // Compiled
+        "*.html": "$(capture).tsx",
+        "*.md": "*-$(capture).md", // E.g. httpx.md
+        "Project.toml": "Manifest.toml", // Julia
+        ".clangd": ".clang-*, compile_commands.json",
+        ".stignore": ".stignore_copy",
+        "*.cpp": "$(capture).out" // Compiled
+    },
+    "explorer.fileNesting.enabled": true,
+
+    // markdown
+    "markdown.validate.enabled": true,
+    // Prevent errors from my tags
+    "markdown.validate.referenceLinks.enabled": "ignore",
+    "markdown.math.enabled": true,
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+
+    // Python
+    "python.languageServer": "Pylance",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    // "python.analysis.stubPath": "../github/PythonRepo/python-type-stubs",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "90"
+    ],
+    "cmake.configureOnOpen": false,
+    // Temp fix, otherwise it activates conda on every new terminal, which is too slow
+    // "python.terminal.activateEnvironment": false,
+}
