@@ -1,5 +1,6 @@
+# C#
 
-- <https://github.com/OmniSharp/omnisharp-vscode>
+- <https://github.com/dotnet/vscode-csharp>
 - Require .NET SDK
     - {C#/Install.md}
     - No need to install `dotnet-script`
