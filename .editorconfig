@@ -1,0 +1,4 @@
+root = true
+
+[*.{cs,csx}]
+dotnet_diagnostic.IDE0004.severity = suggestion

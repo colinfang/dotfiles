@@ -1,0 +1,9 @@
+# Python
+__pycache__
+.mypy_cache/
+.venv/
+.idea/
+*.pyc
+*.egg-info/
+.eggs/
+# Others

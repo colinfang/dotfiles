@@ -1,92 +1,150 @@
 {
-    "markdown.styles": [
-        ".vscode/style.css"
-    ],
-    "files.associations": {
-        "*CMakeLists.txt": "cmake"
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "other": "on",
+            "strings": "on"
+        }
     },
-    "search.exclude": {
-        // Root of the workspace
-        "js_output": true,
-        "js_lib": true,
-    },
-     "editor.tokenColorCustomizations": {
+    "editor.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    // Inconsolata is small
+    "editor.fontSize": 16,
+    "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "scope": ["meta.link.inet.markdown"],
+                "scope": [
+                    "meta.link.inet.markdown"
+                ],
                 "settings": {
                     "foreground": "#608b4e"
                 }
             },
             {
-                "scope": ["punctuation.definition.math.begin.markdown", "punctuation.definition.math.end.markdown"],
+                "scope": [
+                    "punctuation.definition.math.begin.markdown",
+                    "punctuation.definition.math.end.markdown"
+                ],
                 "settings": {
                     "foreground": "#608b4e"
                 }
             },
             {
-                "scope": ["markup.reference.plugin"],
+                "scope": [
+                    "markup.reference.plugin"
+                ],
                 "settings": {
                     "foreground": "#c372cc"
                 }
             },
             {
-                "scope": ["markup.tag"],
+                "scope": [
+                    "markup.tag"
+                ],
                 "settings": {
                     "foreground": "#c4d80e"
                 }
             },
             {
-                "scope": ["markup.tag.example"],
+                "scope": [
+                    "markup.tag.example"
+                ],
                 "settings": {
                     "foreground": "#43bccd"
                 }
             },
             {
-                "scope": ["markup.tag.benefit", "markup.tag.abstract"],
+                "scope": [
+                    "markup.tag.benefit",
+                    "markup.tag.abstract"
+                ],
                 "settings": {
                     "foreground": "#56993a"
                 }
             },
             {
-                "scope": ["markup.tag.drawback", "markup.tag.issue"],
+                "scope": [
+                    "markup.tag.drawback",
+                    "markup.tag.issue"
+                ],
                 "settings": {
                     "foreground": "#ea3546"
                 }
             },
             {
-                "scope": ["meta.link.inline.markdown string.other.link.title.markdown"],
+                "scope": [
+                    "meta.link.inline.markdown string.other.link.title.markdown"
+                ],
                 "settings": {
                     "foreground": "#c372cc"
                 }
             },
             {
-                "scope": ["meta.link.inline.markdown markup.underline.link.markdown"],
+                "scope": [
+                    "meta.link.inline.markdown markup.underline.link.markdown"
+                ],
                 "settings": {
                     "foreground": "#999999"
                 }
             },
             {
-                "scope": ["meta.embedded.math.markdown", "markup.math.inline.markdown", "constant.numeric.math.tex", "constant.character.math.tex", "entity.name.function.math.tex", "punctuation.definition.function.math.tex"],
+                "scope": [
+                    "meta.embedded.math.markdown",
+                    "markup.math.inline.markdown",
+                    "constant.numeric.math.tex",
+                    "constant.character.math.tex",
+                    "entity.name.function.math.tex",
+                    "punctuation.definition.function.math.tex"
+                ],
                 "settings": {
                     "foreground": "#CE9178"
                 }
             },
             {
-                "scope": ["markup.italic.markdown"],
+                "scope": [
+                    "markup.italic.markdown"
+                ],
                 "settings": {
-                    "foreground": "#c06c84",
-                    "fontStyle": "bold"
+                    "fontStyle": "bold",
+                    "foreground": "#c06c84"
                 }
-            },{
-                "scope": ["punctuation.definition.italic.markdown"],
+            },
+            {
+                "scope": [
+                    "punctuation.definition.italic.markdown"
+                ],
                 "settings": {
-                    "foreground": "#999999",
-                    "fontStyle": ""
+                    "fontStyle": "",
+                    "foreground": "#999999"
                 }
             }
         ]
     },
+    // "julia.executablePath": "~/julia_binary/julia-1.9.0/bin/julia",
+    // Issue: Need to remove this to see the default in UI
+    // This appends to default list.
+    "explorer.fileNesting.patterns": {
+        "*.cpp": "$(capture).out", // Compiled
+        "*.html": "$(capture).tsx",
+        "*.md": "*-$(capture).md", // E.g. httpx.md
+        "*.tsx": "$(capture).js", // Compiled
+        ".clangd": ".clang-*, compile_commands.json",
+        ".stignore": ".stignore_copy",
+        "Project.toml": "Manifest.toml" // Julia
+    },
+    "files.associations": {
+        "*CMakeLists.txt": "cmake"
+    },
+    "markdown.math.enabled": true,
+    "markdown.preview.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.lineHeight": 1.5,
+    "markdown.styles": [
+        ".vscode/style.css"
+    ],
+    // markdown
+    "markdown.validate.enabled": true,
+    // Prevent errors from my tags
+    "markdown.validate.referenceLinks.enabled": "ignore",
     "mdmath.delimiters": "gitlab",
     // A list of global macros
     "mdmath.globalMacros": [
@@ -141,61 +199,19 @@
         "\\gdef\\lik{\\mathcal{L}}",
         "\\gdef\\if{\\text{\\small if}\\;\\;}"
     ],
-    // Inconsolata is small
-    "editor.fontSize": 16,
-    "markdown.preview.fontSize": 16,
-    "markdown.preview.lineHeight": 1.5,
-    "editor.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
-    "markdown.preview.fontFamily":  "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "notebook.markup.fontSize": 16,
+    "powermode.combo.counterSize": 2,
+    "powermode.combo.timeout": 5,
     "powermode.enabled": true,
     "powermode.presets": "particles",
     "powermode.shake.enabled": false,
-    "powermode.combo.counterSize": 2,
-    "powermode.combo.timeout": 5,
+    "search.exclude": {
+        // Root of the workspace
+        "js_lib": true,
+        "js_output": true
+    },
     // Enable .ipynb in search.
     "search.useIgnoreFiles": false,
-    "notebook.markup.fontSize": 16,
-    // "julia.executablePath": "~/julia_binary/julia-1.9.0/bin/julia",
-    // Issue: Need to remove this to see the default in UI
-    // This appends to default list.
-    "explorer.fileNesting.patterns": {
-        "*.tsx": "$(capture).js", // Compiled
-        "*.html": "$(capture).tsx",
-        "*.md": "*-$(capture).md", // E.g. httpx.md
-        "Project.toml": "Manifest.toml", // Julia
-        ".clangd": ".clang-*, compile_commands.json",
-        ".stignore": ".stignore_copy",
-        "*.cpp": "$(capture).out" // Compiled
-    },
-    "explorer.fileNesting.enabled": true,
-
-    // markdown
-    "markdown.validate.enabled": true,
-    // Prevent errors from my tags
-    "markdown.validate.referenceLinks.enabled": "ignore",
-    "markdown.math.enabled": true,
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "comments": "on",
-            "strings": "on",
-            "other": "on"
-        }
-    },
-
-    // Python
-    "python.languageServer": "Pylance",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.inlayHints.callArgumentNames": "all",
-    // "python.analysis.stubPath": "../github/PythonRepo/python-type-stubs",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "black-formatter.args": [
-        "--line-length",
-        "90"
-    ],
-    "cmake.configureOnOpen": false,
     // Temp fix, otherwise it activates conda on every new terminal, which is too slow
     // "python.terminal.activateEnvironment": false,
 }

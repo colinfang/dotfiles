@@ -1,0 +1,22 @@
+name: CI
+on:
+  # Hack to manually trigger
+  watch:
+    types: [started]
+  schedule:
+    - cron: '2 21 * * *'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'watch' || github.actor == github.event.repository.owner.login
+    steps:
+      - run: echo ${{ github.event_name }}
+      - uses: actions/checkout@v2
+      - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
+      - run: make build_with_github_cache
+      - env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: make run
+      - run: make push
+

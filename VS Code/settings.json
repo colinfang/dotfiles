@@ -1,0 +1,121 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[xml]": {
+        "editor.tabSize": 2
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "90"
+    ],
+    "breadcrumbs.enabled": true,
+    "cSpell.enabled": true,
+    "cmake.configureOnOpen": false,
+    "editor.fontFamily": "'Cascadia Mono', 'Ubuntu Mono', 'Microsoft YaHei'",
+    "editor.fontLigatures": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.stickyScroll.enabled": true,
+    "editor.suggest.preview": true,
+    "editor.wordWrap": "on",
+    "explorer.fileNesting.enabled": true,
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.hpp.jinja": "jinja-cpp",
+        ".clang-format": "yaml",
+        ".clang-tidy": "yaml",
+        ".clangd": "yaml"
+    },
+    "files.eol": "\n",
+    "files.exclude": {
+        // Check UI for default
+        // Those are additional excludes
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        // Check UI for default
+        // Those are additional excludes
+        "**/build*/**": true
+    },
+    "git.ignoreMissingGitWarning": true,
+    "haskell.manageHLS": "PATH",
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "julia.enableCrashReporter": false,
+    "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+    "jupyter.askForKernelRestart": false,
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.useModernNet": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.languageServer": "Pylance",
+    "remote.extensionKind": {
+        "colinfang.markdown-julia": [
+            "ui"
+        ],
+        "hoovercj.vscode-power-mode": [
+            "ui"
+        ],
+        "shuworks.vscode-table-formatter": [
+            "ui"
+        ],
+        "twxs.cmake": [
+            "ui"
+        ]
+    },
+    "search.exclude": {
+        // Check UI for default
+        // Those are additional excludes
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": true,
+        "**/*.pyc": true,
+        "**/.idea": true,
+        "**/.mypy_cache/": true,
+        "**/.pytest_cache/": true,
+        "**/__pycache__/": true,
+        // Root of the workspace
+        ".venv/": true,
+        "build*/": true,
+        "poetry.lock": true,
+        "target/": true
+    },
+    "search.useIgnoreFiles": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "tableformatter.markdown.tableEdgesType": "Normal",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "update.mode": "manual",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.value": 4,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.iconTheme": "vs-seti"
+}
