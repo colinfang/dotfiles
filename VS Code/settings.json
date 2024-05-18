@@ -38,6 +38,8 @@
         // Check UI for default
         // Those are additional excludes
     },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         // Check UI for default
