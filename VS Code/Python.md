@@ -22,6 +22,6 @@
 
 # Black Formatter
 
+- *Black* is bundled
 - [Tip] Useful for Jupyter
 - [Settings](</Project Template/PythonRepo/.vscode/settings.json>)
-- *Black* package is bundled

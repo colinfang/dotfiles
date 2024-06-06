@@ -1,4 +1,5 @@
 root = true
 
 [*.{cs,csx}]
+# # Remove unnecessary cast
 dotnet_diagnostic.IDE0004.severity = suggestion

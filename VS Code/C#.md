@@ -1,23 +1,29 @@
-# C#
+# C# Dev Kit
 
 - <https://github.com/dotnet/vscode-csharp>
-- Require .NET SDK
-    - {C#/Install.md}
-    - No need to install `dotnet-script`
-- Enable `omnisharp.enableRoslynAnalyzers` for code analysis
-    - {:Lint/C#.md}
+- .Net Install Tool is auto installed.
+    - .NET runtime is bundled
+    - "Command Palette" -> "Install New .Net SDK"
+        - [Issue] Not support WSL
+    - Local `dotnet` is used if available.
+        - Otherwise it would use e.g. `.vscode-server/data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.6~x64/dotnet`
+        - [Tip] Check C# extension output
+- C# extension is auto installed.
+- Formatting
+    - `.editorconfig` is ignored for formatting unless EditorConfig extension is installed.
+- Lint
+    - `.editorconfig` is respected
+- Project `.csproj`
+    - `bin/` & `obj/` are auto generated for each `.csproj` found.
+- Script `.csx`
+    - A lot of `using` are auto imported
+        - <https://github.com/filipw/dotnet-script/blob/1.3.1/src/Dotnet.Script.Core/ScriptCompiler.cs#L42>
+    - [Issue] Not supported
+        - <https://github.com/dotnet/vscode-csharp/issues/6411>
+        - Only work if using Omnisharp
+            - `"dotnet.server.useOmnisharp": true`
+            - `"dotnet.preferCSharpExtension": true`
 
-# Project Mode
-
-- Generate `bin/` & `obj/` for each `.csproj` found, resulting with duplicate attribute potentially.
-- `omnisharp.json` is not needed
-
-# Script Mode
-
-- Require `omnisharp.json`
-- `.csproj` is not needed
-- A lot of `using` are auto imported
-    - <https://github.com/filipw/dotnet-script/blob/1.3.1/src/Dotnet.Script.Core/ScriptCompiler.cs#L42>
 
 # `launch.json`
 

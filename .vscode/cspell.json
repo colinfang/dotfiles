@@ -4,6 +4,21 @@
     "version": "0.2",
     // language - current active spelling language
     "language": "en",
+    "dictionaryDefinitions": [
+        {
+            "name": "programDict",
+            "path": "./programDict.txt"
+        }
+    ],
+    "languageSettings": [
+        {
+            "languageId": "markdown",
+            "allowCompoundWords": true,
+            "dictionaries": [
+                "wordsEn", "programDict"
+            ]
+        }
+    ],
     // words - list of words to be always considered correct
     "words": [
     ],

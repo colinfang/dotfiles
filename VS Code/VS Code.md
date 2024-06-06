@@ -1,6 +1,6 @@
 # Settings
 
-- User settings are stored in `~/.config/Code/Code/User/`
+- User settings are stored in `~/.config/Code/User/` or `%AppData%\Code\User\`
     - `settings.json`
     - `keybindings.json`
 - Support `**` (Recursive expansion).

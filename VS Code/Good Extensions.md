@@ -27,11 +27,11 @@
 # Markdown Related
 
 - Markdown Preview Mermaid Support
-
+- Markdown Image Size
+    - Adds `![](./cat.gif =100x200)` image size syntax support.
 
 # My Extensions
 
 - Markdown Julia
 - Markdown+Math
     - My fork for macros.
-
