@@ -13,9 +13,11 @@
     "languageSettings": [
         {
             "languageId": "markdown",
-            "allowCompoundWords": true,
             "dictionaries": [
-                "wordsEn", "programDict"
+                "wordsEn",
+                "python",
+                "data-science",
+                "programDict"
             ]
         }
     ],

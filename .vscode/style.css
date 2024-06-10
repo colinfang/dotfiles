@@ -31,8 +31,9 @@
     padding-bottom: 0.5em;
 }
 
-
-
+.vscode-dark {
+    --vscode-textPreformat-background: #1f1f1f
+}
 
 eqn {
     font-size: 1.3em;

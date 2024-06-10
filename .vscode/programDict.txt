@@ -1,5 +1,1 @@
 pylance
-pylint
-pyright
-mypy
-pyproject

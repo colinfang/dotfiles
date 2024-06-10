@@ -212,6 +212,16 @@
     },
     // Enable .ipynb in search.
     "search.useIgnoreFiles": false,
+    // This is to disable vscode-notebook-cell (.ipynb) spell check
+    "cSpell.allowedSchemas": [
+        "file",
+        "gist",
+        "repo",
+        "sftp",
+        "untitled",
+        "vscode-scm",
+        "vscode-userdata"
+    ],
     // Temp fix, otherwise it activates conda on every new terminal, which is too slow
     // "python.terminal.activateEnvironment": false,
 }

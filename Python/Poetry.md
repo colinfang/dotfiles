@@ -52,5 +52,7 @@ deactivate
         - Better to fix Python version e.g. `python = "3.9.*"`
         - Because *poetry* looks for a package version that works for all possible variants of Python rather than the current version.
 - [Tip] Use `poetry add "pandas-stubs"` to install, as it would handle the package name capital & fill in the versions.
-- [Tip] Sometimes quotes are needed
+- Sometimes quotes are needed
     - [Example] `poetry add "numpyro[cpu]"`
+- `poetry update [--dry-run]`
+    - Respect the version constraints in `pyproject.toml`
