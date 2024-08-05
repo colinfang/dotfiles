@@ -17,3 +17,9 @@
     - Equivalent to `ls`
 - `$env:ProgramData` - Show environment variable
     - `ls "$env:ProgramFiles\Common Files"`
+
+
+# My Config
+
+- Enable "Updates For Other Microsoft Products When Updating Windows" in Update -> Advanced Options
+    - This updates WSL kernel

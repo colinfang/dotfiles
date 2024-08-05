@@ -6,7 +6,7 @@
 - Support `**` (Recursive expansion).
 - `files.exclude` sets what appears in the explorer.
     - Files are greyed out based on `.gitignore`
-        - TODO: Check whether it is because of GitLens or native?
+        - Need to be a git repository (`git init`) and have git installed
     - `explorer.excludeGitIgnore` - Ignore files from `.gitignore`
 - Search in workspace
     - `search.exclude` inherits `files.exclude`.

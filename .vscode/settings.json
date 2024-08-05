@@ -200,11 +200,6 @@
         "\\gdef\\if{\\text{\\small if}\\;\\;}"
     ],
     "notebook.markup.fontSize": 16,
-    "powermode.combo.counterSize": 2,
-    "powermode.combo.timeout": 5,
-    "powermode.enabled": true,
-    "powermode.presets": "particles",
-    "powermode.shake.enabled": false,
     "search.exclude": {
         // Root of the workspace
         "js_lib": true,
