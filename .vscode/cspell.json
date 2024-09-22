@@ -6,18 +6,17 @@
     "language": "en",
     "dictionaryDefinitions": [
         {
-            "name": "programDict",
-            "path": "./programDict.txt"
-        }
+            "name": "extraMarkdownDict",
+            "path": "./extraMarkdownDict.txt"
+        },
     ],
     "languageSettings": [
         {
             "languageId": "markdown",
             "dictionaries": [
-                "wordsEn",
                 "python",
                 "data-science",
-                "programDict"
+                "extraMarkdownDict"
             ]
         }
     ],

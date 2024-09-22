@@ -24,6 +24,7 @@
 - Debug frontend stuff
     - "Command Palette" -> "Open webview developer tool"
     - [Tip] Chrome console displays useful errors from extension.
+- Click language status bar (curly brackets before language mode) in the status bar to see some extension status.
 
 # Keyboard Shortcut
 

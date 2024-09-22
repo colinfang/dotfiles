@@ -25,3 +25,8 @@
 - *Black* is bundled
 - [Tip] Useful for Jupyter
 - [Settings](</Project Template/PythonRepo/.vscode/settings.json>)
+
+# isort
+
+- *isort* is bundled
+- "Command Palette" -> "Organize import"

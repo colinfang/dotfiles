@@ -59,3 +59,19 @@ dotnet run -c release
 
 - [VS Code](</VS Code/C%23.md>)
 - [Lint](</Lint/C%23.md>)
+
+
+# Visual Studio
+
+- Start without debugging <kbd>Ctrl + F5</kbd> would prompt "press any key to continue" before quit console.
+- Config
+    - Debug -> Options -> Text Editor -> C# -> Advanced
+        - Check "Underline reassigned variables"
+        - Check everything in "Inline Hints"
+- If breakpoint doesn't work
+    - Debug -> Options -> Debugging -> General
+        - Uncheck "Enable just my code"
+        - Uncheck "Require source files to exactly match the original version"
+- `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>`
+    - This would copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
+    - <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#copylocallockfileassemblies>

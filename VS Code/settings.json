@@ -59,6 +59,11 @@
     },
     "git.ignoreMissingGitWarning": true,
     "haskell.manageHLS": "PATH",
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "isort.check": true,
     "javascript.inlayHints.enumMemberValues.enabled": true,
     "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
     "javascript.inlayHints.parameterNames.enabled": "all",
