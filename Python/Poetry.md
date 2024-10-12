@@ -1,7 +1,7 @@
 
 ```bash
-conda create --name python312 "python=3.12"
-conda activate python312
+micromamba create -n python312 "python=3.12"
+micromamba activate python312
 curl -sSL https://install.python-poetry.org | python -
 # Install into ~/.local/bin
 # export PATH=$PATH:$HOME/.local/bin
@@ -19,11 +19,13 @@ poetry config virtualenvs.in-project true
 
 ###################################
 # In a repository
+# Make sure we are not in a conda / mamba environment
+micromamba deactivate
 poetry init
 # See which python is used
 poetry env info
 ls -alh .venv/bin/python
-poetry env use ~/miniconda3/envs/python311/bin/python
+poetry env use ~/micromamba/envs/python312/bin/python
 # Install according to `poetry.lock`
 poetry install
 # Update packages and `poetry.lock`
@@ -35,9 +37,17 @@ deactivate
 ```
 
 
-
 - Dependencies are specified in `pyproject.toml`
-- [Issue] It cannot manage Python version. So Conda is still needed.
+    - 2 modes
+        - [Default] Package mode
+            - Intend to package the project into a wheel
+            - `name` & `version` are mandatory.
+        - Non-package mode
+            - `package-mode = false`
+- [Remark] Do not activate Conda / Mamba environment before doing poetry operation, otherwise
+    - `poetry env info` shows Conda / Mamba environnement
+    - `poetry install` install `pyproject.toml` dependencies into Conda / Mamba environment.
+- [Issue] It cannot manage Python version. So Conda / Mamba is still needed.
 - [Issue] Don't know how to set auto complete for antigen zsh
 - Configuration
     - <https://python-poetry.org/docs/configuration/>
@@ -52,7 +62,7 @@ deactivate
         - Better to fix Python version e.g. `python = "3.9.*"`
         - Because *poetry* looks for a package version that works for all possible variants of Python rather than the current version.
 - [Tip] Use `poetry add "pandas-stubs"` to install, as it would handle the package name capital & fill in the versions.
-- Sometimes quotes are needed
-    - [Example] `poetry add "numpyro[cpu]"`
+    - Sometimes quotes are needed
+        - [Example] `poetry add "numpyro[cpu]"`
 - `poetry update [--dry-run]`
     - Respect the version constraints in `pyproject.toml`

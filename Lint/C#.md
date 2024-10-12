@@ -1,15 +1,21 @@
 # Roslyn Code Analysis
 
 - <https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options>
+- Respected by Visual Studio & VS Code C# Dev Kit
 - [My config](</.editorconfig>)
 - Severity level
     - default
     - none
+        - Cursor hover no display
+        - No special syntax highlighting
     - silent
-        - Grey out
-            - TODO: Check if this is correct
-        - Not appear in "Problems"
+        - No IDE suggestions (e.g. 3 gray dots under the first 2 characters)
+        - Not appear in error lists / problems
+        - Grey out in syntax highlighting
+        - Cursor hover display the issues & suggestions
     - suggestion
+        - Has IDE suggestions
+        - Appear in error lists / problems
     - warning
     - error
 - [Issue] No concise syntax to ignore a line

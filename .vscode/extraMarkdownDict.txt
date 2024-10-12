@@ -1,3 +1,5 @@
 clangd
 pylance
 wslpath
+micromamba
+miniconda

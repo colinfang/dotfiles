@@ -68,6 +68,9 @@ dotnet run -c release
     - Debug -> Options -> Text Editor -> C# -> Advanced
         - Check "Underline reassigned variables"
         - Check everything in "Inline Hints"
+    - Debug -> Options -> Projects & Solutions -> General
+        - Check "Track active item in solution explorer"
+            - So that clicking on a file tab auto selects the file in solution explorer
 - If breakpoint doesn't work
     - Debug -> Options -> Debugging -> General
         - Uncheck "Enable just my code"
