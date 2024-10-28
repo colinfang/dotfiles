@@ -2,53 +2,53 @@
 
 - [Convention] `_some_unused` to bypass unused-variable warning.
 - [My config](</pyproject.toml>)
-    - PyLint - `[tool.pylint]`
-    - Pyright - `[tool.pyright]`
-    - MyPy - `[tool.mypy]`
+    - *PyLint* - `[tool.pylint]`
+    - *Pyright* - `[tool.pyright]`
+    - *MyPy* - `[tool.mypy]`
 - Placeholder function body `...` ellipsis
-    - Pyright & MyPy - Ignore return type check
+    - *Pyright* & *MyPy* - Ignore return type check
 
 # Inline Configuration Via Comments
 
 - Ignore a file
-    - PyLint - `# pylint: skip-file` at the top of a file.
-    - MyPy & Pyright - `# type: ignore` at the top of a file.
+    - *PyLint* - `# pylint: skip-file` at the top of a file.
+    - *MyPy* & *Pyright* - `# type: ignore` at the top of a file.
 - Per file configuration
-    - Pyright
+    - *Pyright*
         - [Example] `# pyright: reportUnknownMemberType=none`
         - [Issue] Only work for the current cell now if it is on a notebook
-    - MyPy
+    - *MyPy*
         - [Example] `# mypy: disallow-any-generics=False`
         - [Example] `# mypy: allow-any-generics`
             - `=True` can be omitted
 - Per line configuration
-    - PyLint - `... # pylint: disable=not-an-iterable`
-    - MyPy & Pyright - `... # type: ignore`
-    - MyPy - `... # type: ignore[code1, code2]`
-        - [Issue] This would make Pyright to ignore the line
+    - *PyLint* - `... # pylint: disable=not-an-iterable`
+    - *MyPy* & *Pyright* - `... # type: ignore`
+    - *MyPy* - `... # type: ignore[code1, code2]`
+        - [Issue] This would make *Pyright* to ignore the line
             - <https://github.com/python/mypy/issues/12358>
             - [Workaround] Do not use it
-    - Pyright
+    - *Pyright*
         - `... # pyright: ignore`
         - `... # pyright: ignore[code1, code2]`
-    - For both PyLint and MyPy
+    - For both *PyLint* & *MyPy*
         - `... # type: ignore[override] # pylint: disable=arguments-differ`
 - Next line
-    - PyLint - `# pylint: disable-next=not-an-iterable`
+    - *PyLint* - `# pylint: disable-next=not-an-iterable`
 - Block level configuration
-    - PyLint
+    - *PyLint*
         ```python
         if True:
             # pylint: enable=no-member
         ```
 - Detect unnecessary ignore
-    - Pyright - `reportUnnecessaryTypeIgnoreComment`
-    - MyPy - `warn_unused_configs`
-    - PyLint - `useless-suppression`
+    - *Pyright* - `reportUnnecessaryTypeIgnoreComment`
+    - *MyPy* - `warn_unused_configs`
+    - *PyLint* - `useless-suppression`
 - References
-    - Pyright
+    - *Pyright*
         - <https://github.com/microsoft/pyright/blob/main/docs/comments.md>
-    - MyPy
+    - *MyPy*
         - <https://mypy.readthedocs.io/en/stable/inline_config.html>
 
 # PyLint

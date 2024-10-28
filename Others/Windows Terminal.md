@@ -6,7 +6,7 @@
 # Configs
 
 - GUI settings display some interesting options.
-    - Click the profile on the left bar to see the details.
+    - Click on the profile on the left bar to see the details.
         - Reveal the command associated to particular `source`
 - Cannot have `"source": "Windows.Terminal.Wsl"` for the non-default one.
 - [Issue] - Cannot add startup command under `wsl`.
@@ -54,5 +54,3 @@
     "keys": "ctrl+shift+e"
 },
 ```
-
-

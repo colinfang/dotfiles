@@ -54,6 +54,15 @@ dotnet run -c release
     - Can be renamed anything except for empty.
     - [Example](<csproj>)
 
+# MSTest
+
+- [Example](<test_csproj>)
+- `dotnet test` to run all tests
+- A test project can appear as a normal executable.
+    - Add `<OutputType>Exe</OutputType>` & `<GenerateProgramFile>false</GenerateProgramFile>` to `<PropertyGroup>`
+    - Add `public static void Main(string[] args)` to code
+    - Run tests doesn't trigger `Main`
+
 
 # Working Environment
 

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Remove="ToIgnore/**" />
+    <Compile Remove="ToIgnore*/**/abc*.cs" />
   </ItemGroup>
 
   <ItemGroup>

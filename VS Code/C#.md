@@ -14,6 +14,7 @@
 - Lint
     - `.editorconfig` is respected
 - Project `.csproj`
+    - Click on Solution Explorer under File Explorer to see all recognized projects.
     - `bin/` & `obj/` are auto generated for each `.csproj` found.
 - Script `.csx`
     - A lot of `using` are auto imported
@@ -23,6 +24,11 @@
         - Only work if using Omnisharp
             - `"dotnet.server.useOmnisharp": true`
             - `"dotnet.preferCSharpExtension": true`
+- Tests
+    - Test projects are recognized
+        - Run `dotnet test` to see why a test isn't included
+    - Click on "Testing" in activity bar (left most) to show test explorer
+    - Click on "Test Results" tab next to Terminal to see STDOUT
 
 
 # `launch.json`
