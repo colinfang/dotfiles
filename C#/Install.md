@@ -2,11 +2,9 @@
 
 ```bash
 # install package repository & keys
-wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-
-apt install dotnet-sdk-8.0
+# ppa is needed only for new sdk on old ubuntu
+add-apt-repository ppa:dotnet/backports
+apt install dotnet-sdk-9.0
 dotnet --info
 ```
 
@@ -84,6 +82,18 @@ dotnet run -c release
     - Debug -> Options -> Debugging -> General
         - Uncheck "Enable just my code"
         - Uncheck "Require source files to exactly match the original version"
-- `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>`
-    - This would copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
-    - <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#copylocallockfileassemblies>
+
+# `.csproj`
+
+- [Example]
+    - [Project](<csproj>)
+    - [Test project](<test_csproj>)
+- `PropertyGroup`
+    - `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>`
+        - This would copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
+        - <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#copylocallockfileassemblies>
+    - C# language version
+        - [Example] Build a project that targets .NET 6 from the current version of VS 2022
+            - C# 12 if `LangVersion` is set to `default`
+            - C# 10 if `LangVersion` is unspecified
+        - <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-versioning>

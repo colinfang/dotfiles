@@ -25,6 +25,8 @@
     - "Command Palette" -> "Open webview developer tool"
     - [Tip] Chrome console displays useful errors from extension.
 - Click on language status bar (curly brackets before language mode) in the status bar to see some extension status.
+- Auto complete in terminal
+    - <kbd>Right</kbd>
 
 # Keyboard Shortcut
 
