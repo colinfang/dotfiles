@@ -60,6 +60,7 @@ dotnet run -c release
     - Add `<OutputType>Exe</OutputType>` & `<GenerateProgramFile>false</GenerateProgramFile>` to `<PropertyGroup>`
     - Add `public static void Main(string[] args)` to code
     - Run tests doesn't trigger `Main`
+- Test class & methods need to be `public`
 
 
 # Working Environment
@@ -70,7 +71,9 @@ dotnet run -c release
 
 # Visual Studio
 
-- Start without debugging <kbd>Ctrl + F5</kbd> would prompt "press any key to continue" before quit console.
+- "Start without debugging" <kbd>Ctrl + F5</kbd> would prompt "press any key to continue" before quit console.
+- "Start debugging" & "Start without debugging" would trigger build
+    - [Default] Debug -> Projects and Solutions -> Build and Run -> "On Run, when projects are out of date" is set to "Always Build"
 - Config
     - Debug -> Options -> Text Editor -> C# -> Advanced
         - Check "Underline reassigned variables"
@@ -90,10 +93,13 @@ dotnet run -c release
     - [Test project](<test_csproj>)
 - `PropertyGroup`
     - `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>`
-        - This would copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
+        - Copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
         - <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#copylocallockfileassemblies>
     - C# language version
         - [Example] Build a project that targets .NET 6 from the current version of VS 2022
             - C# 12 if `LangVersion` is set to `default`
             - C# 10 if `LangVersion` is unspecified
         - <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-versioning>
+- `ItemGroup`
+    - `<Content Include="ExtraData\**"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>`
+        - Copy any files under `ExtraData` folder to output folder.
