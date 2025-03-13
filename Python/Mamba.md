@@ -17,7 +17,7 @@ micromamba create -n python312 "python=3.12"
     - `micromamba` - A C++ based CLI, self-contained in a single-file executable.
 - Like conda, the base environment contains the mamba installation alongside a Python installation.
     - Since mamba require Python to run.
-    - [Remark] `micromamba` create empty base environment.
+    - [Remark] `micromamba` create empty base environment as it doesn't depend on Python.
 - A prefix is a fully self-contained & portable installation.
     - Target prefix
         - Just an environment

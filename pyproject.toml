@@ -2,10 +2,15 @@
 useLibraryCodeForTypes = false
 typeCheckingMode = "strict"
 
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+# Check all options that are "none" by default in "strict" mode
 reportCallInDefaultInitializer = "error"
+reportImplicitOverride = "error"
 reportImplicitStringConcatenation = "error"
+reportImportCycles = "error"
 reportMissingSuperCall = "none"
 reportPropertyTypeMismatch = "error"
+reportShadowedImports = "error"
 reportUninitializedInstanceVariable = "error"
 reportUnnecessaryTypeIgnoreComment = "error"
 reportUnusedCallResult = "none"

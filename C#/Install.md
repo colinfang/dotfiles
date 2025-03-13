@@ -101,5 +101,11 @@ dotnet run -c release
             - C# 10 if `LangVersion` is unspecified
         - <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-versioning>
 - `ItemGroup`
+    - <https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items>
     - `<Content Include="ExtraData\**"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>`
         - Copy any files under `ExtraData` folder to output folder.
+    - `<InternalsVisibleTo Include="ProjectName.Tests" />`
+        - The specified friendly assembly would gain access to all internal members of this project.
+        - [Tip] Useful to declare the test project as a friend.
+        - It doesn't require the friendly assembly in the solution.
+            - E.g. Can publish as a nuget package and any assembly that has name matching the specified string would be able to visit its internal members.
