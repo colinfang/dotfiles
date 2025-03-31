@@ -16,4 +16,3 @@ Checks: >
   -readability-else-after-return,
   -readability-identifier-length,
   -readability-named-parameter
-

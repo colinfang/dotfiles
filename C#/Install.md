@@ -62,6 +62,11 @@ dotnet run -c release
     - Run tests doesn't trigger `Main`
 - Test class & methods need to be `public`
 
+# BenchmarkDotNet
+
+- [Issue] Display a benchmark target return value in a column
+    - <https://github.com/dotnet/BenchmarkDotNet/issues/784>
+
 
 # Working Environment
 
