@@ -87,3 +87,4 @@
     - Store in `%UserProfile%\.wslconfig` in Windows
     - Config settings globally across all distributions in WSL2
     - [My config](<.wslconfig>)
+    - WSL Settings app is the GUI for it.

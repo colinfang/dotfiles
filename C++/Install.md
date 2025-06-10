@@ -20,17 +20,21 @@
     - Search e.g. `gcc-12` for a specific version
 
 
-# C++ Standards Support in GCC
+# C++ Standards Support
 
-- <https://gcc.gnu.org/projects/cxx-status.html>
+- GCC
+    - <https://gcc.gnu.org/projects/cxx-status.html>
 - Default standard used for each compiler version
     - <https://gist.github.com/ax3l/53db9fa8a4f4c21ecc5c4100c0d93c94>
 - `-std=c++23`
-    - Use `-std=c++2b` in GCC 12 or earlier
+    - Added in GCC 13
+    - Added in Clang 17
+    - Use `-std=c++2b` for old versions
 - `-std=c++20`
-    - Use `-std=c++2a` in GCC 9 or earlier
-- `-std=c++17` - Default since GCC 11.1
-- `-std=c++14` - Default since GCC 6.1
+    - Added in GCC 10
+    - Use `-std=c++2a` for old versions
+- `-std=c++17`
+- `-std=c++14`
 - `-std=c++11`
 - GNU extension
     - `-std=gnu++11` instead of `-std=c++11`
@@ -90,11 +94,11 @@ update-alternatives --config gcc
 # For a certain version, use e.g. `llvm-toolchain-jammy-16`
 # apt-add-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main"
 # apt update
-apt install clang-19 clangd-19
+apt install clang-21 clangd-21
 
-update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1900 \
-    --slave /usr/bin/clang++ clang++ /usr/bin/clang++-19 \
-    --slave /usr/bin/clangd clangd /usr/bin/clangd-19
+update-alternatives --install /usr/bin/clang clang /usr/bin/clang-21 2100 \
+    --slave /usr/bin/clang++ clang++ /usr/bin/clang++-21 \
+    --slave /usr/bin/clangd clangd /usr/bin/clangd-21
 
 update-alternatives --install /usr/bin/clang clang /usr/bin/clang-16 1600 \
     --slave /usr/bin/clang++ clang++ /usr/bin/clang++-16 \

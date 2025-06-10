@@ -1,7 +1,7 @@
 
 ```bash
-micromamba create -n python312 "python=3.12"
-micromamba activate python312
+micromamba create -n python313 "python=3.13"
+micromamba activate python313
 curl -sSL https://install.python-poetry.org | python -
 # Install into ~/.local/bin
 # export PATH=$PATH:$HOME/.local/bin
@@ -25,13 +25,15 @@ poetry init
 # See which python is used
 poetry env info
 ls -alh .venv/bin/python
-poetry env use ~/micromamba/envs/python312/bin/python
+poetry env use ~/micromamba/envs/python313/bin/python
 # Install according to `poetry.lock`
 poetry install
 # Update packages and `poetry.lock`
 poetry update
 # See installed packages
 poetry show
+# Only show those are included in pyproject.toml
+poetry show --top-level
 source .venv/bin/activate
 deactivate
 ```
@@ -44,6 +46,7 @@ deactivate
             - `name` & `version` are mandatory.
         - Non-package mode
             - `package-mode = false`
+- Can modify virtual environment prompt name e.g. `non-package-mode-py3.13` in `.venv/bin/activate` script.
 - [Remark] Do not activate Conda / Mamba environment before doing poetry operation, otherwise
     - `poetry env info` shows Conda / Mamba environnement
     - `poetry install` install `pyproject.toml` dependencies into Conda / Mamba environment.

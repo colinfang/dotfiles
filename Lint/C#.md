@@ -1,6 +1,6 @@
 # Roslyn Code Analysis
 
-- <https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options>
+- <https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options>
 - Respected by Visual Studio & VS Code C# Dev Kit
 - [My config](</.editorconfig>)
 - Severity level
@@ -23,7 +23,7 @@
     - Remove unused parameter (IDE0060)
         - `_` or `_1` does not flag
         - `_a` does
-        - <https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0060>
+        - <https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0060>
 
 ```c#
 // Ignore a warning temporarily

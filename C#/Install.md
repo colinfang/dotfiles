@@ -34,6 +34,7 @@ dotnet script my_script.csx -c release
 - Windows native SDK is faster than WSL SDK for release build
     - [Convention] Use `dotnet.exe` instead of WSL `dotnet`
 
+
 # CLI Quick Start
 
 ```bash
@@ -52,6 +53,7 @@ dotnet run -c release
     - Can be renamed anything except for empty.
     - [Example](<csproj>)
 
+
 # MSTest
 
 - [Example](<test_csproj>)
@@ -62,10 +64,6 @@ dotnet run -c release
     - Run tests doesn't trigger `Main`
 - Test class & methods need to be `public`
 
-# BenchmarkDotNet
-
-- [Issue] Display a benchmark target return value in a column
-    - <https://github.com/dotnet/BenchmarkDotNet/issues/784>
 
 
 # Working Environment
@@ -81,15 +79,16 @@ dotnet run -c release
     - [Default] Debug -> Projects and Solutions -> Build and Run -> "On Run, when projects are out of date" is set to "Always Build"
 - Config
     - Debug -> Options -> Text Editor -> C# -> Advanced
-        - Check "Underline reassigned variables"
-        - Check everything in "Inline Hints"
+        - ☑️ "Underline reassigned variables"
+        - ☑️ everything in "Inline Hints"
     - Debug -> Options -> Projects & Solutions -> General
-        - Check "Track active item in solution explorer"
+        - ☑️ "Track active item in solution explorer"
             - So that clicking on a file tab auto selects the file in solution explorer
 - If breakpoint doesn't work
     - Debug -> Options -> Debugging -> General
-        - Uncheck "Enable just my code"
-        - Uncheck "Require source files to exactly match the original version"
+        - ❌ "Enable just my code"
+        - ❌ "Require source files to exactly match the original version"
+
 
 # `.csproj`
 
@@ -101,9 +100,8 @@ dotnet run -c release
         - Copy directly imported dll, dll from nuget packages, dll referenced by dependencies to `bins` folder.
         - <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#copylocallockfileassemblies>
     - C# language version
-        - [Example] Build a project that targets .NET 6 from the current version of VS 2022
-            - C# 12 if `LangVersion` is set to `default`
-            - C# 10 if `LangVersion` is unspecified
+        - If unspecified, it is the latest version that the compiler supports & compatible with the specified runtime framework.
+        - `preview` or `latest` would ignore runtime compatibility.
         - <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-versioning>
 - `ItemGroup`
     - <https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items>
@@ -114,3 +112,17 @@ dotnet run -c release
         - [Tip] Useful to declare the test project as a friend.
         - It doesn't require the friendly assembly in the solution.
             - E.g. Can publish as a nuget package and any assembly that has name matching the specified string would be able to visit its internal members.
+
+
+# Good Online Tools
+
+- <https://sharplab.io/>
+    - See IL & assembly & de-compiled C# from IL
+    - [Issue] Not many choices of .NET versions
+- <https://dotnetfiddle.net/>
+    - Online code playground & IL
+- <https://www.godbolt.org/>
+    - See assembly & output in various compilers
+    - [Issue] No IL
+    - <https://github.com/compiler-explorer/compiler-explorer/pull/3168>
+        - Compiler options

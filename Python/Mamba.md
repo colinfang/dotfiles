@@ -4,8 +4,10 @@
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 # Self update
 micromamba self-update
-micromamba create -n python312 "python=3.12"
-# ~/micromamba/envs/python312/bin/python
+micromamba create -n python313 "python=3.13"
+# ~/micromamba/envs/python313/bin/python
+micromamba activate python313
+micromamba update python=3.13 --dry-run
 ```
 
 
