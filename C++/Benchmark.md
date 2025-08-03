@@ -1,3 +1,13 @@
+# Benchmark
+
+- [Tip] Prevent compiler from optimize away operations
+    - Add `extern void use(auto&);` & `extern void use(auto&&);`
+    - Call on the result
+        - Make the compiler believe the result is used.
+    - Call on the input to "initialize"
+        - Made the compiler believe the input is not a constant so as to avoid constant propagation.
+
+
 # `gprof`
 
 - Compile & link with `-pg` in `gcc`.

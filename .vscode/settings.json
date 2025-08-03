@@ -134,6 +134,11 @@
     "files.associations": {
         "*CMakeLists.txt": "cmake"
     },
+    // Temp fix, otherwise it activates conda on every new terminal, which is too slow
+    // "python.terminal.activateEnvironment": false,
+    "github.copilot.enable": {
+        "*": true
+    },
     "markdown.math.enabled": true,
     "markdown.preview.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
     "markdown.preview.fontSize": 16,
@@ -206,11 +211,5 @@
         "js_output": true
     },
     // Enable .ipynb in search.
-    "search.useIgnoreFiles": false,
-    // This is to disable vscode-notebook-cell (.ipynb) spell check
-    "cSpell.enabledSchemes": {
-        "vscode-notebook-cell": false
-    },
-    // Temp fix, otherwise it activates conda on every new terminal, which is too slow
-    // "python.terminal.activateEnvironment": false,
+    "search.useIgnoreFiles": false
 }

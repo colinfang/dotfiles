@@ -58,6 +58,14 @@
         "**/build*/**": true
     },
     "git.ignoreMissingGitWarning": true,
+    "github.copilot.advanced": {
+        "webSearch": false
+    },
+    "github.copilot.enable": {
+        "*": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.nextEditSuggestions.fixes": true,
     "haskell.manageHLS": "PATH",
     "isort.args": [
         "--profile",
@@ -119,6 +127,8 @@
     "search.useIgnoreFiles": true,
     "security.workspace.trust.untrustedFiles": "open",
     "tableformatter.markdown.tableEdgesType": "Normal",
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
@@ -138,5 +148,9 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.iconTheme": "vs-seti",
-    "workbench.tree.enableStickyScroll": true
+    "workbench.tree.enableStickyScroll": true,
+    // This is to disable vscode-notebook-cell (.ipynb) spell check
+    "cSpell.enabledSchemes": {
+        "vscode-notebook-cell": false
+    }
 }
