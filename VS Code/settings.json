@@ -122,6 +122,7 @@
         ".venv/": true,
         "build*/": true,
         "poetry.lock": true,
+        "uv.lock": true,
         "target/": true
     },
     "search.useIgnoreFiles": true,

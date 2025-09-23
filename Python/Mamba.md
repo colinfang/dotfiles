@@ -8,6 +8,10 @@ micromamba create -n python313 "python=3.13"
 # ~/micromamba/envs/python313/bin/python
 micromamba activate python313
 micromamba update python=3.13 --dry-run
+# show all env
+micromamba env list
+# show packages in active env
+micromamba list
 ```
 
 
