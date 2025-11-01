@@ -22,6 +22,12 @@
         - Startup Chrome
         - Breakpoint on .ts files works
 - Sort JSON objects
+- Regex Robin
+    - <https://github.com/dlevs/vscode-regex-robin>
+    - Config schema
+        - <https://github.com/dlevs/vscode-regex-robin/blob/main/package.json>
+    - Config example
+        - <https://github.com/dlevs/vscode-regex-robin/blob/main/test/extension-test-workspace.code-workspace>
 
 
 # Markdown Related

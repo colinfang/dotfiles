@@ -3,6 +3,7 @@
 - <https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options>
 - Respected by Visual Studio & VS Code C# Dev Kit
 - [My config](</.editorconfig>)
+    - Use `<AnalysisMode>All</AnalysisMode>` in `<PropertyGroup>`
 - Severity level
     - default
     - none
@@ -18,6 +19,11 @@
         - Appear in error lists / problems
     - warning
     - error
+- Default severity level & options
+    - IDE????
+        - They change based on `<AnalysisMode>`
+    - Others
+        - Dependencies -> Analyzers
 - [Issue] No concise syntax to ignore a line
 - Some options
     - Remove unused parameter (IDE0060)

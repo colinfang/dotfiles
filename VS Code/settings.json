@@ -15,6 +15,10 @@
     ],
     "breadcrumbs.enabled": true,
     "cSpell.enabled": true,
+    // This is to disable vscode-notebook-cell (.ipynb) spell check
+    "cSpell.enabledSchemes": {
+        "vscode-notebook-cell": false
+    },
     "cmake.configureOnOpen": false,
     "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
     "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
@@ -84,6 +88,9 @@
     "jupyter.askForKernelRestart": false,
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "notebook.cellExecutionTimeVerbosity": "verbose",
+    // So I don't have to manually click to view the entire context if the output is slightly bigger than threshold.
+    "notebook.output.scrolling": true,
     "powermode.combo.location": "off",
     "powermode.enabled": true,
     "powermode.presets": "particles",
@@ -122,8 +129,8 @@
         ".venv/": true,
         "build*/": true,
         "poetry.lock": true,
-        "uv.lock": true,
-        "target/": true
+        "target/": true,
+        "uv.lock": true
     },
     "search.useIgnoreFiles": true,
     "security.workspace.trust.untrustedFiles": "open",
@@ -149,9 +156,5 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.iconTheme": "vs-seti",
-    "workbench.tree.enableStickyScroll": true,
-    // This is to disable vscode-notebook-cell (.ipynb) spell check
-    "cSpell.enabledSchemes": {
-        "vscode-notebook-cell": false
-    }
+    "workbench.tree.enableStickyScroll": true
 }

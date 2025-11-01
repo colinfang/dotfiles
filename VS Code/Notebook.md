@@ -1,0 +1,2 @@
+- [Issue] Cell execution time within notebook doesn't persist across notebook reloads.
+    - <https://github.com/microsoft/vscode/issues/240405>
