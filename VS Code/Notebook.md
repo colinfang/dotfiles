@@ -1,2 +1,4 @@
 - [Issue] Cell execution time within notebook doesn't persist across notebook reloads.
     - <https://github.com/microsoft/vscode/issues/240405>
+- [Issue] Notebook shows scroll bar even when text line limit is not hit
+    - <https://github.com/microsoft/vscode/issues/279981>

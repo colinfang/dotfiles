@@ -4,7 +4,7 @@
 # install package repository & keys
 # ppa is needed only for new sdk on old ubuntu
 add-apt-repository ppa:dotnet/backports
-apt install dotnet-sdk-9.0
+apt install dotnet-sdk-10.0
 dotnet --info
 ```
 
@@ -13,7 +13,7 @@ dotnet --info
 - Installed into `~/.dotnet`
 
 
-# Run Script From .NET CLI
+# Run Script From .NET CLI via `dotnet-script`
 
 ```bash
 # Install script tool in order to run script using CLI
@@ -31,6 +31,13 @@ dotnet script my_script.csx -c release
 ```
 
 - <https://github.com/filipw/dotnet-script>
+- This is no longer needed as we can run single `.cs` file directly.
+
+
+# Run Single `.cs` File From .NET CLI
+
+
+- <https://devblogs.microsoft.com/dotnet/announcing-dotnet-run-app/>
 - Windows native SDK is faster than WSL SDK for release build
     - [Convention] Use `dotnet.exe` instead of WSL `dotnet`
 
@@ -44,14 +51,23 @@ dotnet new console
 # `Program.cs`, `obj/`, `repo.csproj` are generated
 dotnet run -c release
 # `bin/` is generated
+# Remove relevant files in `bin/` for the particular target w.r.t. .csproj
+dotnet clean
+
 ```
 
 
 - <https://code.visualstudio.com/docs/languages/dotnet>
 - `obj/` is like cache, not important
+    - Delete it manually if there is weird errors e.g. "GlobalUsings.g.cs specified multiple times"
 - Generated `.csproj` is minimal
     - Can be renamed anything except for empty.
     - [Example](<csproj>)
+- `dotnet run`
+    - `--project my_project.csproj`
+        - Need to specify project path if there are more than 1
+    - `--file hello.cs`
+        - For single file script
 
 
 # MSTest
@@ -69,7 +85,7 @@ dotnet run -c release
 # Working Environment
 
 - [VS Code](</VS Code/C%23.md>)
-- [Lint](</Lint/C%23.md>)
+- [Lint](Lint.md)
 
 
 # Visual Studio
@@ -112,6 +128,12 @@ dotnet run -c release
         - [Tip] Useful to declare the test project as a friend.
         - It doesn't require the friendly assembly in the solution.
             - E.g. Can publish as a nuget package and any assembly that has name matching the specified string would be able to visit its internal members.
+    - To include or exclude files
+        - `<Compile Remove="ToIgnore/**" />`
+        - `<Compile Include="**/test*.cs" />`
+            - Need to also set `<EnableDefaultItems>false</EnableDefaultItems>` in `PropertyGroup`
+            - Otherwise could hit "Duplicate items were included" because by default all files in the folders are already included
+                - <https://learn.microsoft.com/en-us/dotnet/core/tools/sdk-errors/netsdk1022>
 
 
 # Good Online Tools

@@ -8,6 +8,7 @@
 - Placeholder function body `...` ellipsis
     - *Pyright* & *MyPy* - Ignore return type check
 
+
 # Inline Configuration Via Comments
 
 - Ignore a file
@@ -51,6 +52,7 @@
     - *MyPy*
         - <https://mypy.readthedocs.io/en/stable/inline_config.html>
 
+
 # PyLint
 
 - All checks with code & name
@@ -63,6 +65,7 @@
     - TODO: It should have be fixed
 - `pylint --generate-toml-config`
     - Generate a demo `pyproject.toml`
+
 
 # MyPy
 

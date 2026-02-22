@@ -6,7 +6,7 @@
             "strings": "on"
         }
     },
-    "editor.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "editor.fontFamily": "MyArrow, 'Ubuntu Mono', 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
     // Inconsolata is small
     "editor.fontSize": 16,
     "editor.tokenColorCustomizations": {
@@ -140,7 +140,7 @@
         "*": true
     },
     "markdown.math.enabled": true,
-    "markdown.preview.fontFamily": "MyArrow, 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Ubuntu Mono', 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF Light', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
+    "markdown.preview.fontFamily": "MyArrow, 'Ubuntu Mono', 'Inconsolata', 'Cascadia Code Light', 'JetBrains Mono Light', Consolas, 'Noto Color Emoji', 'Segoe UI Emoji', 'Source Han Sans SC VF', 'STIX Two Math', 'Last Resort High-Efficiency', 'Microsoft YaHei', 'Material Icons'",
     "markdown.preview.fontSize": 16,
     "markdown.preview.lineHeight": 1.5,
     "markdown.styles": [

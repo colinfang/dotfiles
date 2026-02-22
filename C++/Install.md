@@ -1,8 +1,8 @@
 # GNU Compiler Collection (GCC)
 
-- `gcc` - GNC C Compiler
+- `gcc`: GNC C Compiler
     - [Example] `gcc-12`
-- `g++` - GNU C++ Compiler
+- `g++`: GNU C++ Compiler
     - `--version`
     - Depend on `gcc`
 
@@ -137,4 +137,4 @@ RUN cd /opt && git clone --depth 1 -b clang_14 https://github.com/include-what-y
 # Working Environment
 
 - [VS Code](</VS Code/C++.md>)
-- [Lint](</Lint/C++.md>)
+- [Lint](Lint.md)

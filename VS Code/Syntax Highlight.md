@@ -21,6 +21,9 @@
     - `editor.semanticHighlighting.enabled`
     - Check "semantic token type" in "Developer: Inspect Editor Token and Scopes"
 - C#
+    - [Issue] Bracket pair colorization incorrectly renders `>` in C# markdown code fence
+        - <https://github.com/microsoft/vscode/issues/279576>
+        - [Workaround] Customize brackets in `editor.language.colorizedBracketPairs`
 - vscode-clangd
     - [Issue] Semantic highlighting is missing some tokens
         - <https://github.com/clangd/vscode-clangd/issues/326>

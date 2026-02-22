@@ -28,6 +28,7 @@
     - Test projects are recognized
         - Run `dotnet test` to see why a test isn't included
     - Click on "Testing" in activity bar (left most) to show test explorer
+        - Click "refresh" to recognize newly added tests (via compiling the project)
     - Click on "Test Results" tab next to Terminal to see STDOUT
 
 

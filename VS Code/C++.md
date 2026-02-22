@@ -35,7 +35,7 @@
 # vscode-clangd
 
 - Require clangd
-- [See also] [clangd](</Lint/C++.md>)
+- 👉 [clangd](../C++/Lint.md)
 - [Issue] Customize warning level
     - <https://github.com/clangd/vscode-clangd/issues/179>
 - [Tip] If something is wrong in clangd and it cannot resolve, delete `.vscode-server`

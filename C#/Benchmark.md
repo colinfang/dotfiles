@@ -9,3 +9,5 @@
     - [Issue] Only works on Windows, because it relies on ETW
     - <https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/>
     - [Example] `[InliningDiagnoser(allowedNamespaces: ["Benchmarks"])]`
+- Use custom CLI path
+    - [Example] `dotnet run -c Release -- --cli "C:\Tools\dotnet.exe"`
