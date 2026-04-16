@@ -68,6 +68,11 @@ dotnet clean
         - Need to specify project path if there are more than 1
     - `--file hello.cs`
         - For single file script
+- Override `TargetFramework` set in `.csproj`
+    - `dotnet restore -p:TargetFramework=net9.0`
+    - `dotnet run -p:TargetFramework=net9.0 -c Release --no-restore`
+    - [Issue] Need 2 steps. Directly `dotnet run` without `--no-restore` doesn't work
+
 
 
 # MSTest
@@ -141,10 +146,14 @@ dotnet clean
 - <https://sharplab.io/>
     - See IL & assembly & de-compiled C# from IL
     - [Issue] Not many choices of .NET versions
+        - Out of maintenance
 - <https://dotnetfiddle.net/>
     - Online code playground & IL
 - <https://www.godbolt.org/>
     - See assembly & output in various compilers
     - [Issue] No IL
-    - <https://github.com/compiler-explorer/compiler-explorer/pull/3168>
-        - Compiler options
+    - [Issue] Doesn't support top-level statements
+    - Compiler options
+        - Pass `--help` to see what compiler options are available
+            - The code needs to be compilable.
+        - <https://github.com/compiler-explorer/compiler-explorer/pull/3168>

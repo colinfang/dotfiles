@@ -3,9 +3,18 @@
     "[csharp]": {
         // https://github.com/microsoft/vscode/issues/279576
         "editor.language.colorizedBracketPairs": [
-            ["{", "}"],
-            ["[", "]"],
-            ["(", ")"]
+            [
+                "{",
+                "}"
+            ],
+            [
+                "[",
+                "]"
+            ],
+            [
+                "(",
+                ")"
+            ]
         ]
     },
     "[html]": {
@@ -84,18 +93,25 @@
         "black"
     ],
     "isort.check": true,
-    "javascript.inlayHints.enumMemberValues.enabled": true,
-    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "javascript.inlayHints.parameterNames.enabled": "all",
-    "javascript.inlayHints.parameterTypes.enabled": true,
-    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "javascript.inlayHints.variableTypes.enabled": true,
+    "js/ts.implementationsCodeLens.enabled": true,
+    "js/ts.inlayHints.enumMemberValues.enabled": true,
+    "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+    "js/ts.inlayHints.parameterNames.enabled": "all",
+    "js/ts.inlayHints.parameterTypes.enabled": true,
+    "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
+    "js/ts.inlayHints.variableTypes.enabled": true,
+    "js/ts.referencesCodeLens.enabled": true,
     "julia.enableCrashReporter": false,
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
     "jupyter.askForKernelRestart": false,
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "markdown.updateLinksOnFileMove.enabled": "prompt",
+    // Expose Pylance's bundled stubs to MyPy
+    "mypy-type-checker.args": [
+        "--mypy-path",
+        "~/.vscode/extensions/ms-python.vscode-pylance-2025.10.4/dist/bundled/stubs"
+    ],
     "notebook.cellExecutionTimeVerbosity": "verbose",
     // So I don't have to manually click to view the entire context if the output is slightly bigger than threshold.
     "notebook.output.scrolling": true,
@@ -148,14 +164,6 @@
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
-    "typescript.implementationsCodeLens.enabled": true,
-    "typescript.inlayHints.enumMemberValues.enabled": true,
-    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "typescript.inlayHints.parameterNames.enabled": "all",
-    "typescript.inlayHints.parameterTypes.enabled": true,
-    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "typescript.inlayHints.variableTypes.enabled": true,
-    "typescript.referencesCodeLens.enabled": true,
     "update.mode": "manual",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,

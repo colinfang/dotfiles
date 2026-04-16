@@ -39,3 +39,9 @@ void f(int x) {
 #pragma warning restore IDE0060
 }
 ```
+
+
+# Other Analyzers
+
+
+- *Meziantou.Analyzer*

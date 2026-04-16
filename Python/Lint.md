@@ -53,7 +53,7 @@
         - <https://mypy.readthedocs.io/en/stable/inline_config.html>
 
 
-# PyLint
+# *PyLint*
 
 - All checks with code & name
     - <https://pylint.pycqa.org/en/latest/user_guide/checkers/features.html>
@@ -67,7 +67,7 @@
     - Generate a demo `pyproject.toml`
 
 
-# MyPy
+# *MyPy*
 
 - <https://mypy.readthedocs.io/en/latest/command_line.html>
 - Config
@@ -90,7 +90,7 @@
         - <https://github.com/microsoft/vscode-python/issues/18983>
 
 
-# Pyright
+# *Pyright*
 
 - References
     - <https://github.com/microsoft/pyright>
@@ -109,9 +109,9 @@
     - `error`
         - Red underline
     - `false` & `true` are also valid, which toggle the check using the default severity
-- Different type rules from MyPy
+- Different type rules from *MyPy*
     - Especially in {:Literal Type.md}
-- [Convention] Better than MyPy
+- [Convention] Better than *MyPy*
 - [Issue] `reportMissingSuperCall` is useless because it shouts at almost every class.
     - <https://github.com/microsoft/pyright/commit/846cee35dbe7a040f25e5fb373e3df560dcc79e5>
 - "Type of xxx is partially unknown"

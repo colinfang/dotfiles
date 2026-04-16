@@ -9,5 +9,28 @@
     - [Issue] Only works on Windows, because it relies on ETW
     - <https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/>
     - [Example] `[InliningDiagnoser(allowedNamespaces: ["Benchmarks"])]`
-- Use custom CLI path
-    - [Example] `dotnet run -c Release -- --cli "C:\Tools\dotnet.exe"`
+- `[DisassemblyDiagnoser]`
+    - Output in `BenchmarkDotNet.Artifacts/results/xxx-asm.md`
+- `[HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.BranchInstructions)]`
+
+
+# CLI
+
+```c#
+public static void Main(string[] args) {
+    BenchmarkRunner.Run<MyBenchmark>(args: args);
+    // This allows to switch different benchmark class from CLI
+    // BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
+}
+```
+
+- [Example] `dotnet run -c Release -- --list tree`
+    - `--list tree|flat`
+        - List all available benchmarks
+    - `--filter *MyBenchmark.Method1*`
+        - Only run the filtered classes / methods
+        - Match full namespace as displayed via `--list`
+    - `--runtimes net9.0 net10.0`
+        - If multiple runtimes are specified, they also need to appear in `TargetFrameworks` from `PropertyGroup` of `.csproj`
+    - `--cli "C:\Tools\dotnet.exe"`
+        - Use custom CLI path
