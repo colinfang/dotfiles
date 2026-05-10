@@ -3,7 +3,7 @@
 - <https://github.com/dotnet/vscode-csharp>
 - .Net Install Tool is auto installed.
     - .NET runtime is bundled
-    - "Command Palette" -> "Install New .Net SDK"
+    - "Command Palette" ▷ "Install New .Net SDK"
         - [Issue] Not support WSL
     - Local `dotnet` is used if available.
         - Otherwise it would use e.g. `.vscode-server/data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.6~x64/dotnet`

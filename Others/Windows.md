@@ -21,5 +21,5 @@
 
 # My Config
 
-- Enable "Updates For Other Microsoft Products When Updating Windows" in Update -> Advanced Options
+- Enable "Updates For Other Microsoft Products When Updating Windows" in Update ▷ Advanced Options
     - This updates WSL kernel

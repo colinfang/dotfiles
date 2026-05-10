@@ -107,11 +107,6 @@
     "jupyter.askForKernelRestart": false,
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "markdown.updateLinksOnFileMove.enabled": "prompt",
-    // Expose Pylance's bundled stubs to MyPy
-    "mypy-type-checker.args": [
-        "--mypy-path",
-        "~/.vscode/extensions/ms-python.vscode-pylance-2025.10.4/dist/bundled/stubs"
-    ],
     "notebook.cellExecutionTimeVerbosity": "verbose",
     // So I don't have to manually click to view the entire context if the output is slightly bigger than threshold.
     "notebook.output.scrolling": true,

@@ -97,16 +97,16 @@ dotnet clean
 
 - "Start without debugging" <kbd>Ctrl + F5</kbd> would prompt "press any key to continue" before quit console.
 - "Start debugging" & "Start without debugging" would trigger build
-    - [Default] Debug -> Projects and Solutions -> Build and Run -> "On Run, when projects are out of date" is set to "Always Build"
+    - [Default] Debug ▷ Projects and Solutions ▷ Build and Run ▷ "On Run, when projects are out of date" is set to "Always Build"
 - Config
-    - Debug -> Options -> Text Editor -> C# -> Advanced
+    - Debug ▷ Options ▷ Text Editor ▷ C# ▷ Advanced
         - ☑️ "Underline reassigned variables"
         - ☑️ everything in "Inline Hints"
-    - Debug -> Options -> Projects & Solutions -> General
+    - Debug ▷ Options ▷ Projects & Solutions ▷ General
         - ☑️ "Track active item in solution explorer"
             - So that clicking on a file tab auto selects the file in solution explorer
 - If breakpoint doesn't work
-    - Debug -> Options -> Debugging -> General
+    - Debug ▷ Options ▷ Debugging ▷ General
         - ❌ "Enable just my code"
         - ❌ "Require source files to exactly match the original version"
 

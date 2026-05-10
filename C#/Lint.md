@@ -23,7 +23,7 @@
     - IDE????
         - They change based on `<AnalysisMode>`
     - Others
-        - Dependencies -> Analyzers
+        - Dependencies ▷ Analyzers
 - [Issue] No concise syntax to ignore a line
 - Some options
     - Remove unused parameter (IDE0060)

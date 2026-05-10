@@ -6,6 +6,11 @@
 - Notebook in WSL
     - `jupyter.alwaysTrustNotebooks` only works in remote settings.
 - Double click on inlay type hint to auto type annotate.
+- Interpreter & venv path are stored in extension's internal database.
+    - Other extensions (e.g. Pylint) might use this interpreter.
+    - It is possible venv is set up correctly, but interpreter is wrong.
+        - "Command Palette" ▷ "select interpreter" to fix
+
 
 # Pylint
 
@@ -24,13 +29,13 @@
 
 # MyPy
 
-```json
-// Expose Pylance's bundled stubs to MyPy
-"mypy-type-checker.args": [
-    "--mypy-path",
-    "~/.vscode/extensions/ms-python.vscode-pylance-2025.10.4/dist/bundled/stubs"
-],
-```
+- [Issue] Cannot specify stubs
+    - `--mypy-path` is newly added in v1.20
+    - Specify `mypy_path` in `[tool.mypy]` in `pyproject.toml` doesn't work
+- [Remark] Disable for the moment
+    - The most recent extension release was on 2025-03-05 with *MyPy* version v1.15
+        - Now *MyPy* is v1.20
+        - Might not be actively maintained
 
 
 # Black Formatter
@@ -43,4 +48,4 @@
 # isort
 
 - *isort* is bundled
-- "Command Palette" -> "Organize import"
+- "Command Palette" ▷ "Organize import"

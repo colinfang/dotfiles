@@ -20,18 +20,19 @@
 - Double click on tab to maximize panel.
     - Can config whether to maximize or semi-maximize.
 - A cheap way to restart some internal processes
-    - "Command Palette" -> "Reload Window"
+    - "Command Palette" ▷ "Reload Window"
 - Debug frontend stuff
-    - "Command Palette" -> "Open webview developer tool"
+    - "Command Palette" ▷ "Open webview developer tool"
     - [Tip] Chrome console displays useful errors from extension.
 - Click on language status bar (curly brackets before language mode) in the status bar to see some extension status.
 - Auto complete in terminal
     - <kbd>Right</kbd>
 
+
 # Keyboard Shortcut
 
 - Windows & Linux may have different shortcuts.
-- Set keyboard shortcut - Left bottom -> Keyboard shortcut
+- Set keyboard shortcut - Left bottom ▷ Keyboard shortcut
     - Can toggle JSON view `keybindings.json`
 - Navigate
     - <kbd>Alt+Left/Right</kbd> - Go back / forward

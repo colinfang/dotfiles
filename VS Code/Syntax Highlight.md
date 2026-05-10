@@ -52,4 +52,4 @@
     - `typescript.inlayHints`
     - `javascript.inlayHints`
 - Visual Studio
-    - Options -> Text Editor -> C# -> Advanced
+    - Options ▷ Text Editor ▷ C# ▷ Advanced

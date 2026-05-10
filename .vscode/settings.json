@@ -165,7 +165,7 @@
         "\\gdef\\dyydx#1#2{\\frac{∂}{∂#1}\\left(#2\\right)}",
         "\\gdef\\ddydx#1#2{\\frac{∂^2#1}{∂{#2}^2}}",
         "\\gdef\\ddyydx#1#2{\\frac{∂^2}{∂#1^2}\\left(#2\\right)}",
-        "\\gdef\\d#1{\\mathop{\\mathrm{d}#1}}",
+        "\\gdef\\d#1{\\,\\mathrm{d}#1}",
         "\\gdef\\radon#1#2{\\frac{\\d #1}{\\d #2}}",
         "\\gdef\\Hessian{\\mathbf{H}}",
         // Others
@@ -176,7 +176,6 @@
         "\\gdef\\tr#1{\\operatorname{tr}(#1)}",
         "\\gdef\\norm#1{\\left\\lVert #1\\right\\rVert}",
         "\\gdef\\P#1{\\operatorname{ℙ}\\!\\left(#1\\right)}",
-        "\\gdef\\p{\\mathop{p}}",
         "\\gdef\\cov{\\operatorname{cov}}",
         "\\gdef\\ELBO{\\text{ELBO}}",
         "\\gdef\\T{^⊺}",

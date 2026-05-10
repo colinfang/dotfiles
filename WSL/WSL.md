@@ -15,6 +15,7 @@
 - `wsl --update`
     - Update kernel manually.
 
+
 # Call WSL Command From Windows
 
 - [Example] `wsl ~/miniconda3/envs/scratch/bin/python`
@@ -24,19 +25,21 @@
     - All subsequent commands are from Linux.
     - In `Cmd.exe` only
 
+
 # Call Windows Command From WSL
 
 - Just append `.exe`
     - [Example] `dotnet.exe`
+
 
 # Overview
 
 - Access Linux from Windows
     - Explorer
         - [Convention] `\\wsl.localhost\Ubuntu-22.04`
-            - Resolve to "This PC" -> "Linux"
+            - Resolve to "This PC" ▷ "Linux"
         - `\\wsl$\Ubuntu-22.04`
-            - Resolve to "This PC" -> "Network"
+            - Resolve to "This PC" ▷ "Network"
     - Chrome
         - `file://wsl$/Ubuntu-20.04/`
         - `file://wsl.localhost/Ubuntu-20.04/`
